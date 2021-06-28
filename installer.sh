@@ -13,14 +13,10 @@ set -e
     echo "-------------------------------------------------------"
     echo "Made by Dannni#0058"
     echo "-------------------------------------------------------"
-
     echo "Please note that installing it on a non-fresh OS may cause problems."
     echo "-------------------------------------------------------"
-
-    if [ "$lsb_dist" =  "ubuntu" ]; then
     echo "This script is only available for Ubuntu OS."
     echo "-------------------------------------------------------"
-    fi
 
     sleep 6
 
