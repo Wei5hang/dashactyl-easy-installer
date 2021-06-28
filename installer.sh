@@ -66,7 +66,6 @@ set -e
 
     sleep 1
 
-    cd dashactyl
     file=settings.json
 
     echo "What is the web port? [80] (The port Dashactyl will run on)"
