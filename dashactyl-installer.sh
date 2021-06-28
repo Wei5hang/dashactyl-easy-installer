@@ -70,6 +70,5 @@ file_install() {
     echo "Dashactyl File Install Completed!"
     echo "-------------------------------------------------------"
 }
-}
 install_options
 
