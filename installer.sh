@@ -53,41 +53,6 @@ set -e
     cd dashactyl
     sudo npm install
 
-    sleep 1
-
-    echo "-------------------------------------------------------"
-    echo "Starting Settings Configuration."
-    echo "Read the Docs for further infomration."
-    echo "https://cutt.ly/omyptWe"
-    echo "-------------------------------------------------------"
-
-    sleep 1
-
-    file=settings.json
-
-    echo "What is the web port? [80] (The port Dashactyl will run on)"
-    read WEBPORT
-    echo "What is the pterodactyl URL? (https://panel.domain.com)"
-    read PTERODACTYL_DOMAIN
-    echo "What is the pterodactyl API key? (Perms: https://cutt.ly/dmypP54)"
-    read PTERODACTYL_KEY
-    echo "What is the Discord Oauth2 ID?"
-    read DOAUTH_ID
-    echo "What is the Discord Oauth2 Secret?"
-    read DOAUTH_SECRET
-    echo "What is the Discord Oauth2 Link?"
-    read DOAUTH_LINK
-
-    sed -i 
-    -e 's/"port":.*/"port": '$WEBPORT',/' 
-    -e 's/"domain":.*/"domain": "'$PTERODACTYL_DOMAIN'",/' 
-    -e 's/"key":.*/"key": "'$PTERODACTYL_KEY'"/' 
-    -e 's/"id":.*/"id": "'$DOAUTH_ID'",/' 
-    -e 's/"link":.*/"link": "'$DOAUTH_LINK'",/' 
-    -e 's/discord oauth2 application secret/$DOAUTH_SECRET/g' 
-   
-    $file
-
     echo "-------------------------------------------------------"
     echo "Dashactyl installation Completed!"
     echo "-------------------------------------------------------"
