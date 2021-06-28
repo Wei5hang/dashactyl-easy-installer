@@ -52,7 +52,7 @@ dependercy_install() {
     sudo apt update -y && sudo apt upgrade -y
     sudo apt install git -y
     sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
-    curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+    curl -fsSL https://deb.nodesource.com/setup_12.x | sudo bash -
     apt install nodejs -y
     apt install npm -y
     apt install nginx -y
