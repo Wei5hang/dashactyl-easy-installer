@@ -77,8 +77,6 @@ set -e
     read DOAUTH_SECRET
     echo "What is the Discord Oauth2 Link?"
     read DOAUTH_LINK
-    echo "What is the Callback path? [callback]" 
-    read DOAUTH_CALLBACKPATH
 
     sed -i 
     -e 's/"port":.*/"port": '$WEBPORT',/' 
@@ -86,7 +84,6 @@ set -e
     -e 's/"key":.*/"key": "'$PTERODACTYL_KEY'"/' 
     -e 's/"id":.*/"id": "'$DOAUTH_ID'",/' 
     -e 's/"link":.*/"link": "'$DOAUTH_LINK'",/' 
-    -e 's/"path":.*/"path": "'$DOAUTH_CALLBACKPATH'",/' 
     -e 's/discord oauth2 application secret/$DOAUTH_SECRET/g' 
    
     $file
