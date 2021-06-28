@@ -87,7 +87,8 @@ set -e
     -e 's/"id":.*/"id": "'$DOAUTH_ID'",/' 
     -e 's/"link":.*/"link": "'$DOAUTH_LINK'",/' 
     -e 's/"path":.*/"path": "'$DOAUTH_CALLBACKPATH'",/' 
-    -e '0,/"secret":.*/! {0,/"secret":.*/ s/"secret":.*/"secret": "'$DOAUTH_SECRET'",/}' 
+    -e 's/discord oauth2 application secret/$DOAUTH_SECRET/g' 
+   
     $file
 
     echo "-------------------------------------------------------"
