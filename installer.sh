@@ -52,9 +52,6 @@ set -e
     git clone https://github.com/real2two/dashactyl.git
     cd dashactyl
     sudo npm install
-    echo "-------------------------------------------------------"
-    echo "Dashactyl Install Completed!"
-    echo "-------------------------------------------------------"
 
     sleep 1
 
