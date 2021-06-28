@@ -17,6 +17,8 @@ set -e
     echo "-------------------------------------------------------"
     echo "This script is only available for Ubuntu OS."
     echo "-------------------------------------------------------"
+    echo "Starting Dashactyl installation in 5 seconds."
+    echo "-------------------------------------------------------"
 
     sleep 6
 
