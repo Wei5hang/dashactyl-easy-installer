@@ -23,15 +23,22 @@ set -e
     fi
 
 install_options(){
-    echo "Are you sure to install Dashactyl? (y/n)"
+    echo "Select your installation option:"
+    echo "[1] - Full Fresh Dashactyl Install (Dependercies, Files)"
+    echo "[2] - Install the Dependercies."
+    echo "[3] - Install the Files."
     echo "-------------------------------------------------------"
     read choice
     case $choice in
-        y ) installoption=y
+        1 ) installoption=1
             dependercy_install
             file_install
             ;;
-        n ) exit
+        2 ) installoption=2
+            dependercy_install
+            ;;
+        3 ) installoption=3
+            file_install
             ;;
         * ) output "You did not enter a valid selection."
             install_options
