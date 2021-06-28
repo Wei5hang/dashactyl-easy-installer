@@ -51,7 +51,8 @@ dependercy_install() {
     echo "------------------------------------------------------"
     sudo apt update -y && sudo apt upgrade -y
     sudo apt install git -y
-    curl -fsSL https://rpm.nodesource.com/setup_12.x | sudo bash -
+    sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
+    curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
     apt install nodejs -y
     apt install npm -y
     apt install nginx -y
