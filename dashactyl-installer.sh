@@ -49,12 +49,12 @@ dependercy_install() {
     echo "------------------------------------------------------"
     echo "Starting Dependercy install."
     echo "------------------------------------------------------"
-    sudo apt update && sudo apt upgrade
-    sudo apt install git
+    sudo apt update -y && sudo apt upgrade -y
+    sudo apt install git -y
     curl -fsSL https://rpm.nodesource.com/setup_12.x | sudo bash -
-    apt install nodejs
-    apt install npm
-    apt install nginx
+    apt install nodejs -y
+    apt install npm -y
+    apt install nginx -y
     echo "-------------------------------------------------------"
     echo "Dependercy Install Completed!"
     echo "-------------------------------------------------------"
@@ -69,7 +69,6 @@ file_install() {
     echo "-------------------------------------------------------"
     echo "Dashactyl File Install Completed!"
     echo "-------------------------------------------------------"
-}
 }
 install_options
 
